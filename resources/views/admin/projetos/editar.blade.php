@@ -6,7 +6,7 @@
     <div class="container">
         <h3 class="center">editando o projeto</h3>
         <div class="row">
-            <form class="" action="{{ route('admin.projetos.atualizar', $registro->id) }}" method="post" enctype="multipart/form-data">
+            <form class="" action="{{ route('admin.projetos.atualizar', $registro->id) }}" method="post">
                 {{ csrf_field() }}
 
                 <input type="hidden" name="_method" value="put">

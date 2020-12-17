@@ -22,7 +22,7 @@
                     @foreach ($registros as $registro)
                         <tr>
                             <td>{{ $registro->projetos  }}</td>
-                            <td>{{ $registro->id_cliente }}</td>
+                            <td>{{ $registro->id_clientes }}</td>
                             <td>{{ $registro->vl_acordado }}</td>
                             <td>{{ $registro->vl_recebido }}</td>
                             <td>{{ $registro->dt_pagamento }}</td>
@@ -36,7 +36,7 @@
             </table>
         </div>
         <div class="row">
-            <a class="btn blue" href="{{ route('admin.projetos.adicionar') }}">Adicionar</a>
+            <a class="btn dark" href="{{ route('admin.projetos.adicionar') }}">Adicionar</a>
         </div>
     </div>
     <script>

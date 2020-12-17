@@ -16,6 +16,7 @@ class ProjetosController extends Controller
     public function adicionar(){
         $clientes = \App\Clientes::all(['id', 'clientes']);
 
+        
         return view('admin.projetos.adicionar', compact('clientes'));
     }
 
@@ -23,9 +24,7 @@ class ProjetosController extends Controller
         $dados = $req->all();
         $clientes = $req->get('clientes', null);
 
-        $Projetos::create($dados);
-
-        $Projetos->clientes()->sync($clientes);
+        Projetos::create($dados, $clientes);
 
         return redirect()->route('admin.projetos');
 
@@ -35,7 +34,7 @@ class ProjetosController extends Controller
         $registro = Projetos::find($id);
         $clientes = \App\Clientes::all(['id', 'clientes']);
 
-        return view('admin.projetos.editar', compact('registro', 'clietes'));
+        return view('admin.projetos.editar', compact('registro', 'clientes'));
     }
 
     public function atualizar(Request $req, $id){

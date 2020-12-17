@@ -6,7 +6,7 @@
     <div class="container">
         <h3 class="center">Adicionando projeto</h3>
         <div>
-            <form action="{{ route('admin.projetos.salvar') }}" method="psot" enctype="multipart/form-data">
+            <form action="{{ route('admin.projetos.salvar') }}" method="post">
                 {{ csrf_field() }}
                 @include('admin.projetos._form')
 
@@ -14,7 +14,6 @@
             </form>
         </div>
     </div>
-
 
 <style>
 

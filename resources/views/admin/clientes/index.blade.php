@@ -29,7 +29,7 @@
             </table>
         </div>
         <div class="row">
-            <a class="btn blue" href="{{ route('admin.clientes.adicionar') }}">Adicionar</a>
+            <a class="btn dark" href="{{ route('admin.clientes.adicionar') }}">Adicionar</a>
         </div>
     </div>
     <script>

@@ -1,5 +1,5 @@
     <footer>
-      <h3>Lista de projetos</h3>
+      <h3>M2 TÓPICOS EM DESENVOLVIMENTO DE SISTEMAS DE INFORMAÇÃO</h3>
     </footer>
   </body>
 </html>
@@ -13,7 +13,7 @@
   }
 
   footer h3 {
-    font-size: 22px;
+    font-size: 15px;
   }
 
 </style>
