@@ -1,14 +1,14 @@
 @extends('layout.site')
 
-@section('titulo', 'Adicionar funcionario')
+@section('titulo', 'Adicionar clientes')
 
 @section('conteudo')
     <div class="container">
-        <h3 class="center">Adicionando funcionario</h3>
+        <h3 class="center">Adicionando clientes</h3>
         <div>
-            <form action="{{ route('admin.funcionario.salvar') }}" method="post">
+            <form action="{{ route('admin.clientes.salvar') }}" method="post">
                 {{ csrf_field() }}
-                @include('admin.funcionario._form')
+                @include('admin.clientes._form')
 
                 <button class="btn green">Salvar</button>
             </form>
