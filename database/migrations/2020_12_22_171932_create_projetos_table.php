@@ -16,10 +16,15 @@ class CreateProjetosTable extends Migration
         Schema::create('projetos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('projetos');
+            // chave estrangeira clientes
             $table->integer('id_clientes')->unsigned();
             $table->foreign('id_clientes')->references('id')->on('clientes');
-            $table->decimal('vl_acordado', 5,2);
-            $table->decimal('vl_recebido', 5,2);
+            // chave estrangeira funcionario
+            $table->integer('id_funcionario')->unsigned();
+            $table->foreign('id_funcionario')->references('id')->on('funcionarios');
+            
+            $table->decimal('vl_acordado', 18,2);
+            $table->decimal('vl_recebido', 18,2);
             $table->date('dt_pagamento');
             $table->timestamps();
         });

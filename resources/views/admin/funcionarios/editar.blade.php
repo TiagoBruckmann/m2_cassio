@@ -1,16 +1,16 @@
 @extends('layout.site')
 
-@section('titulo', 'Editar funcionario')
+@section('titulo', 'Editar cliente')
 
 @section('conteudo')
     <div class="container">
-        <h3 class="center">editar o funcionario</h3>
+        <h3 class="center">editar o cliente</h3>
         <div class="row">
-            <form class="" action="{{ route('admin.funcionario.atualizar', $registro->id) }}" method="post">
+            <form class="" action="{{ route('admin.clientes.atualizar', $registro->id) }}" method="post">
                 {{ csrf_field() }}
 
                 <input type="hidden" name="_method" value="put">
-                @include('admin.funcionario._form')
+                @include('admin.clientes._form')
 
                 <button class="btn green">Atualizar</button>
             

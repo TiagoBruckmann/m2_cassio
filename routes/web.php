@@ -33,3 +33,11 @@ Route::get('/admin/clientes/editar\{id}',['as'=>'admin.clientes.editar','uses'=>
 Route::put('/admin/clientes/atualizar\{id}',['as'=>'admin.clientes.atualizar','uses'=>'App\Http\Controllers\Admin\ClientesController@atualizar']);
 Route::get('/admin/clientes/deletar/{id}',['as'=>'admin.clientes.deletar','uses'=>'App\Http\Controllers\Admin\ClientesController@deletar']);
 
+//rota para o caminho do funcionarios incluindo inserção/atualização e delete dos dados
+Route::get('/admin/funcionarios',['as'=>'admin.funcionarios','uses'=>'App\Http\Controllers\Admin\FuncionariosController@index']);
+Route::get('/admin/funcionarios/adicionar',['as'=>'admin.funcionarios.adicionar','uses'=>'App\Http\Controllers\Admin\FuncionariosController@adicionar']);
+Route::post('/admin/funcionarios/salvar',['as'=>'admin.funcionarios.salvar','uses'=>'App\Http\Controllers\Admin\FuncionariosController@salvar']);
+Route::get('/admin/funcionarios/editar\{id}',['as'=>'admin.funcionarios.editar','uses'=>'App\Http\Controllers\Admin\FuncionariosController@editar']);
+Route::put('/admin/funcionarios/atualizar\{id}',['as'=>'admin.funcionarios.atualizar','uses'=>'App\Http\Controllers\Admin\FuncionariosController@atualizar']);
+Route::get('/admin/funcionarios/deletar/{id}',['as'=>'admin.funcionarios.deletar','uses'=>'App\Http\Controllers\Admin\FuncionariosController@deletar']);
+

@@ -4,7 +4,7 @@
 
 @section('conteudo')
     <div class="container">
-        <h3 class="center">Lista de funcionario</h3>
+        <h3 class="center">Lista de clientes</h3>
         <div>
             <table>
                 <thead>
@@ -20,8 +20,8 @@
                             <td>{{ $registro->clientes }}</td>
                             <td>{{ $registro->fone }}</td>
                             <td>
-                                <a class="btn deep-black" onclick="editar()" href="{{ route('admin.funcionario.editar', $registro->id) }}">Editar</a>
-                                <a class="btn deep-black" onclick="deletar()" href="{{ route('admin.funcionario.deletar', $registro->id) }}">Deletar</a>
+                                <a class="btn deep-black" onclick="editar()" href="{{ route('admin.clientes.editar', $registro->id) }}">Editar</a>
+                                <a class="btn deep-black" onclick="deletar()" href="{{ route('admin.clientes.deletar', $registro->id) }}">Deletar</a>
                             </td>
                         </tr>
                     @endforeach
@@ -29,7 +29,7 @@
             </table>
         </div>
         <div class="row">
-            <a class="btn dark" href="{{ route('admin.funcionario.adicionar') }}">Adicionar</a>
+            <a class="btn dark" href="{{ route('admin.clientes.adicionar') }}">Adicionar</a>
         </div>
     </div>
     <script>
