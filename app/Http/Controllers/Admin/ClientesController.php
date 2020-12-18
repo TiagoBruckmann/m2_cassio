@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use App\Clientes;
 
@@ -41,5 +42,28 @@ class ClientesController extends Controller
     public function deletar($id){
         Clientes::find($id)->delete();
         return redirect()->route('admin.clientes');
+    }
+
+    public function enviaDados(Request $req)
+    {
+        $id = $req->input('id');
+
+        $client = Clientes::find($id);
+
+        if ($client) {
+            $response = Http::post('link aqui', [
+                'nome' => $client->name,
+                'fone' => $client->fone
+            ]);
+        }
+
+    }
+
+    public function recebeDados(Request $req)
+    {
+        $response = Http::get('link aqui', [
+            'nome' => '{{ clientes }}',
+            'fone' => '{{ fone }}'
+        ]);
     }
 }

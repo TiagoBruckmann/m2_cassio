@@ -1,7 +1,6 @@
 <div class="form-group">
     <label>Projeto</label>
     <input type="text" name="projetos" value="{{ isset($registro->projetos) ? $registro->projetos : '' }}">
-    
 </div>
 
 <div class="form-group">
@@ -26,5 +25,5 @@
 
 <div class="form-group">
 <label>Data de pagamento</label>
-    <input type="text" name="dt_pagamento" value="{{ isset($registro->dt_pagamento) ? $registro->dt_pagamento : '' }}">
+    <input type="date" name="dt_pagamento" value="{{ isset($registro->dt_pagamento) ? $registro->dt_pagamento : '' }}">
 </div>

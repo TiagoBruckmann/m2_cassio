@@ -21,7 +21,7 @@
                     
                     @foreach ($registros as $registro)
                         <tr>
-                            <td>{{ $registro->projetos  }}</td>
+                            <td>{{ $registro->projetos }}</td>
                             <td>{{ $registro->id_clientes }}</td>
                             <td>{{ $registro->vl_acordado }}</td>
                             <td>{{ $registro->vl_recebido }}</td>

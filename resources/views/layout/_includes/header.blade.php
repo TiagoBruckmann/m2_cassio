@@ -26,7 +26,6 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="{{route('admin.projetos')}}">Projetos</a></li>
                     <li><a href="{{route('admin.clientes')}}">Clientes</a></li>
-                    <!-- <li><a href="{{route('admin.funcionarios')}}">Funcionarios</a></li> -->
                 </ul>    
             </div>
         </nav>
@@ -35,7 +34,6 @@
             <li><a href="/">Home</a></li>
             <li><a href="{{route('admin.projetos')}}">Projetos</a></li>
             <li><a href="{{route('admin.clientes')}}">Clientes</a></li>
-            <!-- <li><a href="{{route('admin.funcionarios')}}">Funcionarios</a></li> -->
         </ul>
     </header>
 
